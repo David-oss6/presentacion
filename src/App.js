@@ -1,24 +1,154 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/app/App.css";
+import { useLayoutEffect, useEffect, useState } from "react";
+import axios from "axios";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import SobreMi from "./components/SobreMi";
+import Progreso from "./components/Progreso";
+import Contacto from "./components/Contacto";
+import { LinkContainer, TitleContainer } from "./styles/app/styledApp";
+import coding from "./img/coding_2.png";
+import DropDown from "./components/dropdown/DropDown";
+import linkedinIco from "./img/linkedin.png";
+import instaIco from "./img/insta.png";
+import gitIco from "./img/github.png";
 
 function App() {
+  const [repos, setRepos] = useState([]);
+  const [inicio, setInicio] = useState(true);
+  const [size, setSize] = useState();
+  const [modal, setModal] = useState(null);
+
+  useEffect(() => {
+    setSize(window.innerWidth);
+
+    try {
+      axios(`https://api.github.com/users/David-oss6/repos`).then((res) =>
+        handleRepos(res.data)
+      );
+    } catch (error) {
+      console.log("fail");
+    }
+    setTimeout(() => {
+      setInicio(false);
+    }, 3000);
+  }, []);
+  const handleRepos = (repos) => {
+    repos.sort((a, b) => {
+      if (a.created_at > b.created_at) {
+        return -1;
+      } else if (a.created_at < b.created_at) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+    setRepos(repos);
+  };
+  useLayoutEffect(() => {
+    window.addEventListener("resize", function () {
+      setSize(window.innerWidth);
+    });
+  });
+  useEffect(() => {
+    if (size >= 680) {
+      setModal(false);
+    } else {
+      setModal(true);
+    }
+  }, [size]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <div className="app_container">
+          <nav className="navBar">
+            <TitleContainer className="titleContainer" inicio={inicio}>
+              <div>
+                <h1
+                  className={
+                    inicio
+                      ? "text-warning titul start_h1_size"
+                      : "text-warning titulo"
+                  }
+                >
+                  Front-end Developer
+                </h1>
+                <div className={inicio ? "header start_header_size" : "header"}>
+                  <p>David Iglesias Molina</p>
+                  <p>im.david85@gmail.com</p>
+                  <p>Barcelona</p>
+                </div>
+              </div>
+            </TitleContainer>
+            {!inicio && modal && <DropDown />}
+            {!inicio && !modal && (
+              <div className="enlaces neonText">
+                <LinkContainer inicio={inicio}>
+                  <Link className="links" to="/">
+                    QUIEN SOY
+                  </Link>
+                  <Link className="links" to="/progreso">
+                    MI GITHUB
+                  </Link>
+                  <Link className="links" to="/contacto">
+                    CONTACTO
+                  </Link>
+                </LinkContainer>
+              </div>
+            )}
+          </nav>
+          {inicio && (
+            <>
+              <div className="cuadrado"></div>
+              <img className="coding" src={coding} alt="code" />
+            </>
+          )}
+
+          {!inicio && (
+            <>
+              <Routes>
+                <Route path="/" element={<SobreMi />} />
+                <Route path="/progreso" element={<Progreso repos={repos} />} />
+                <Route path="/contacto" element={<Contacto />} />
+              </Routes>
+            </>
+          )}
+        </div>
+
+        {!inicio && (
+          <footer className={modal ? "footer_modal" : "footer"}>
+            <div className="link_container">
+              <p className="footer_text"> Puedes encontrarme en</p>
+              <ul className="ulList ">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/david-i-01944a15b/"
+                    target="_blank"
+                  >
+                    <img
+                      className="link_pic"
+                      src={linkedinIco}
+                      alt="linkedin"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/David_im85/">
+                    <img className="link_pic" src={instaIco} alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/David-oss6/">
+                    <img className="link_pic_git" src={gitIco} alt="github" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
+        )}
+      </>
+    </Router>
   );
 }
 
