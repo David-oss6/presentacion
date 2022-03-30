@@ -65,6 +65,7 @@ export default function SobreMi() {
                 Fundamentos de la programación con JAVA, curso de 80h. <br />
               </p>
             </li>
+            <li></li>
             <li>
               <h6 className="formacion_h6 ">
                 HTML, CSS, Bootstrap, Javascript & React

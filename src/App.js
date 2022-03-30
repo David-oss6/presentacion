@@ -83,7 +83,7 @@ function App() {
                 </div>
               </div>
             </TitleContainer>
-            {!inicio && modal && <DropDown />}
+            {!inicio && modal && <DropDown set_verSobreMi={set_verSobreMi} />}
             {!inicio && !modal && (
               <div className="enlaces neonText">
                 <LinkContainer inicio={inicio}>
