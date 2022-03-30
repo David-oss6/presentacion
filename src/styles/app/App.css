@@ -90,7 +90,10 @@ h1 {
 }
 
 .rutasOff {
-  display: none;
+  opacity: 0;
+}
+.rutasOn {
+  opacity: 1;
 }
 
 /* FOOOOTEEEEERRRRR **********************************/

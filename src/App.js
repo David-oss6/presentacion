@@ -105,7 +105,7 @@ function App() {
             </>
           )}
 
-          <div className={inicio ? "rutasOff" : ""}>
+          <div className={inicio ? "rutasOff" : "rutasOn"}>
             <Routes>
               <Route path="/" element={<SobreMi />} />
               <Route path="/progreso" element={<Progreso repos={repos} />} />
@@ -132,12 +132,15 @@ function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/David_im85/">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/David_im85/"
+                  >
                     <img className="link_pic" src={instaIco} alt="instagram" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/David-oss6/">
+                  <a target="_blank" href="https://github.com/David-oss6/">
                     <img className="link_pic_git" src={gitIco} alt="github" />
                   </a>
                 </li>
