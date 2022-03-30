@@ -26,7 +26,6 @@ export default function Contacto() {
     <>
       <div className="contenedor inicial">
         <p>No dudes en ponerte en contacto conmigo:</p>
-        
         <form
           onSubmit={sendEmail}
           className="formContainer"
