@@ -18,6 +18,7 @@ function App() {
   const [inicio, setInicio] = useState(true);
   const [size, setSize] = useState();
   const [modal, setModal] = useState(null);
+  const [ver_sobreMi, set_verSobreMi] = useState(false);
 
   useEffect(() => {
     setSize(window.innerWidth);
@@ -31,6 +32,7 @@ function App() {
     }
     setTimeout(() => {
       setInicio(false);
+      set_verSobreMi(true);
     }, 3000);
   }, []);
   const handleRepos = (repos) => {
@@ -85,13 +87,25 @@ function App() {
             {!inicio && !modal && (
               <div className="enlaces neonText">
                 <LinkContainer inicio={inicio}>
-                  <Link className="links" to="/">
+                  <Link
+                    onClick={() => set_verSobreMi(false)}
+                    className="links"
+                    to="/"
+                  >
                     QUIEN SOY
                   </Link>
-                  <Link className="links" to="/progreso">
+                  <Link
+                    onClick={() => set_verSobreMi(false)}
+                    className="links"
+                    to="/progreso"
+                  >
                     MI GITHUB
                   </Link>
-                  <Link className="links" to="/contacto">
+                  <Link
+                    onClick={() => set_verSobreMi(false)}
+                    className="links"
+                    to="/contacto"
+                  >
                     CONTACTO
                   </Link>
                 </LinkContainer>
@@ -104,14 +118,16 @@ function App() {
               <img className="coding" src={coding} alt="code" />
             </>
           )}
-
-          <div className={inicio ? "rutasOff" : "rutasOn"}>
-            <Routes>
-              <Route path="/" element={<SobreMi />} />
-              <Route path="/progreso" element={<Progreso repos={repos} />} />
-              <Route path="/contacto" element={<Contacto />} />
-            </Routes>
-          </div>
+          <div className={ver_sobreMi ? <SobreMi /> : ""}></div>
+          {!inicio && (
+            <>
+              <Routes>
+                <Route path="/" element={<SobreMi />} />
+                <Route path="/progreso" element={<Progreso repos={repos} />} />
+                <Route path="/contacto" element={<Contacto />} />
+              </Routes>
+            </>
+          )}
         </div>
 
         {!inicio && (
