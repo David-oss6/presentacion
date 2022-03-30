@@ -105,15 +105,13 @@ function App() {
             </>
           )}
 
-          {!inicio && (
-            <>
-              <Routes>
-                <Route path="/" element={<SobreMi />} />
-                <Route path="/progreso" element={<Progreso repos={repos} />} />
-                <Route path="/contacto" element={<Contacto />} />
-              </Routes>
-            </>
-          )}
+          <div className={inicio ? "rutasOff" : ""}>
+            <Routes>
+              <Route path="/" element={<SobreMi />} />
+              <Route path="/progreso" element={<Progreso repos={repos} />} />
+              <Route path="/contacto" element={<Contacto />} />
+            </Routes>
+          </div>
         </div>
 
         {!inicio && (
