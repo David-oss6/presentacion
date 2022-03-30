@@ -82,7 +82,6 @@ function App() {
                   <p>Barcelona</p>
                 </div>
               </div>
-              <h1>Miwerda</h1>
             </TitleContainer>
             {!inicio && modal && <DropDown />}
             {!inicio && !modal && (
