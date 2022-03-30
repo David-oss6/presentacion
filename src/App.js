@@ -118,7 +118,7 @@ function App() {
               <img className="coding" src={coding} alt="code" />
             </>
           )}
-          <div className={ver_sobreMi ? <SobreMi /> : ""}></div>
+          {ver_sobreMi ? <SobreMi /> : ""}
           {!inicio && (
             <>
               <Routes>
