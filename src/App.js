@@ -63,7 +63,7 @@ function App() {
   return (
     <Router>
       <>
-        <div className="app_container">
+        <div>
           <nav className="navBar">
             <TitleContainer className="titleContainer" inicio={inicio}>
               <div>

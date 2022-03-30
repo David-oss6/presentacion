@@ -8,18 +8,17 @@
 body {
   background-color: #0096c7;
   color: white;
+  min-width: 100%;
   min-height: 100vh;
   position: relative;
 }
-.app_container {
-  margin: 2% 2% 0 2%;
-}
+
 .navBar {
   display: flex;
   flex-flow: row nowrap;
   align-items: end;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 2% 2% 20px 2%;
 }
 
 h1 {

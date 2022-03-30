@@ -26,8 +26,7 @@ export default function Contacto() {
     <>
       <div className="contenedor inicial">
         <p>No dudes en ponerte en contacto conmigo:</p>
-        {/* On submit, send the form-data to a file named "action_page.php" (to
-         process the input) */}
+        
         <form
           onSubmit={sendEmail}
           className="formContainer"
