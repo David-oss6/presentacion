@@ -125,6 +125,17 @@
   &:hover {
     background-color: #0178a0;
     background-image: linear-gradient(to bottom, #016d91, #00bfff);
+
+    .repoLi {
+      overflow: visible;
+      transition: all ease-out 0.1s;
+      transform: translateX(20px) scale(1.2);
+      text-shadow: 2px 2px 2px black;
+      color: #ffc107;
+    }
+    .repoP {
+      color: #ffc107;
+    }
   }
 }
 .repoLi_container {

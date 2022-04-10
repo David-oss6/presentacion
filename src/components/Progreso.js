@@ -51,6 +51,7 @@ export default function Progreso({ repos }) {
             sprint 1 al 9 junto con interview task pertenecen a los ejercicios
             realizados durante mi formación. Los siguientes corresponden a mis
             propios proyectos.
+            <br /> ¡No dudes en hacer click para ver el código!
           </p>
           <div className="h3Btn_container">
             <h3 className="h3Title">
@@ -90,7 +91,7 @@ export default function Progreso({ repos }) {
             {repos.map((repo, index) => (
               <li className="repoLi" key={index}>
                 <div className="repoLi_container">
-                  <p>{index}. </p>
+                  <p className="repoP">{index + 1}. </p>
                   <a
                     className="repoA"
                     target="_blank"
