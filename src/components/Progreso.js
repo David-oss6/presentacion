@@ -45,7 +45,7 @@ export default function Progreso({ repos }) {
   return (
     <>
       {repos && (
-        <div className="fondo inicial">
+        <div className="git_fondo inicial">
           <p className="texto_git">
             A continuación estan listados mis proyectos subidos a Github. Del
             sprint 1 al 9 junto con interview task pertenecen a los ejercicios
@@ -89,13 +89,16 @@ export default function Progreso({ repos }) {
           <ol className="repoList">
             {repos.map((repo, index) => (
               <li className="repoLi" key={index}>
-                <a
-                  className="repoA"
-                  target="_blank"
-                  href={`https://github.com/David-oss6/${repo.name}`}
-                >
-                  <p className="repoP">{repo.name}</p>
-                </a>
+                <div className="repoLi_container">
+                  <p>{index}. </p>
+                  <a
+                    className="repoA"
+                    target="_blank"
+                    href={`https://github.com/David-oss6/${repo.name}`}
+                  >
+                    <p className="repoP">{repo.name}</p>
+                  </a>
+                </div>
                 <p className="fechas">{repo.created_at.slice(0, 10)}</p>
               </li>
             ))}
