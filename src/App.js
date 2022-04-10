@@ -63,7 +63,7 @@ function App() {
   return (
     <Router>
       <>
-        <div>
+        <div className="content_container">
           <nav className="navBar">
             <TitleContainer className="titleContainer" inicio={inicio}>
               <div>
@@ -131,7 +131,9 @@ function App() {
         </div>
 
         {!inicio && (
-          <footer className={modal ? "footer_modal" : "footer"}>
+          <footer
+            className={modal ? "footer_modal footer_pin" : "footer footer_pin"}
+          >
             <div className="link_container">
               <p className="footer_text"> Puedes encontrarme en</p>
               <ul className="ulList ">

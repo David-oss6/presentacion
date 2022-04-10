@@ -24,7 +24,7 @@ export default function Contacto() {
   };
   return (
     <>
-      <div className="contenedor inicial">
+      <div className=" fondo inicial">
         <p>No dudes en ponerte en contacto conmigo:</p>
         <form
           onSubmit={sendEmail}

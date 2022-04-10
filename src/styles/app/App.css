@@ -8,9 +8,9 @@ body {
   background-color: #0178a0;
   background-image: linear-gradient(to bottom, #016d91, #00bfff);
   color: white;
-  min-width: 100%;
-  min-height: 100vh;
-  position: relative;
+}
+.content_container {
+  min-height: calc(100vh);
 }
 .navBar {
   display: flex;
@@ -88,19 +88,17 @@ h1 {
   opacity: 1;
 }
 /* FOOOOTEEEEERRRRR **********************************/
-
-.footer {
-  position: absolute;
-  margin: 0;
-  padding: 0;
+.footer_pin {
+  position: relative;
   bottom: 0;
+  left: 0;
+}
+.footer {
   width: 100%;
   height: 102px;
   background-color: white;
 }
 .footer_modal {
-  position: absolute;
-  bottom: 0;
   background-color: white;
   height: 86px;
   width: 100%;
