@@ -1,0 +1,193 @@
+.git_fondo {
+  background-color: #00000025;
+  background-position: center;
+  padding: 3%;
+  border-radius: 5px;
+  text-align: left;
+  min-height: 100vh;
+}
+.h3Btn_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 4px;
+  margin-bottom: 2%;
+  max-height: 52px;
+}
+
+.gitLogo {
+  max-width: 45px;
+}
+.h3Title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: none;
+
+  @media (max-width: 700px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 570px) {
+    font-size: 0.8rem;
+  }
+}
+.texto_git {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 0.8rem;
+}
+.btnContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+}
+
+.orderBtn {
+  justify-self: end;
+  text-align: left;
+  outline: none;
+  border: none;
+  text-shadow: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.orderBtn:hover {
+  background-color: #d3d3d3;
+}
+
+.handleOrderContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 0.6rem;
+  padding: 2px;
+  border-radius: 4px;
+  border: solid 1px #d3d3d360;
+  transition: 0.3s ease-in;
+  text-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+.btn_active {
+  align-self: start;
+  background-color: white;
+  border: 1px black solid;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 720px) {
+    max-width: 90px;
+  }
+}
+
+.btn_standby {
+  background-color: #d3d3d3;
+  overflow: hidden;
+  max-width: 120px;
+  max-height: 20px;
+  text-shadow: none;
+
+  &:hover {
+    background-color: #44444460;
+    box-shadow: none;
+  }
+  @media (max-width: 720px) {
+    max-width: 90px;
+  }
+}
+
+.repoList {
+  display: grid;
+  place-items: left;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 350px;
+  gap: 5px;
+  margin: 0;
+
+  @media (max-width: 700px) {
+    max-height: 400px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+}
+.repoLi {
+  color: white;
+
+  max-width: 250px;
+  min-width: 150px;
+  list-style: none;
+  border: 1px solid rgb(66, 65, 65);
+  border-radius: 6px;
+  padding: 2px 6px;
+  &:hover {
+    background-color: #0178a0;
+    background-image: linear-gradient(to bottom, #016d91, #00bfff);
+
+    .repoLi {
+      overflow: visible;
+      transition: all ease-out 0.1s;
+      transform: translateX(20px) scale(1.2);
+      text-shadow: 2px 2px 2px black;
+      color: #ffc107;
+    }
+    .repoP {
+      color: #ffc107;
+    }
+  }
+}
+.repoLi_container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 26px;
+
+  &:hover {
+    overflow: visible;
+    transition: all ease-out 0.1s;
+    transform: translateX(20px) scale(1.2);
+    text-shadow: 2px 2px 2px black;
+    color: #ffc107;
+
+    .repoP {
+      color: #ffc107;
+    }
+  }
+}
+
+.repoA {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.repoA:hover {
+  filter: drop-shadow(2px 2px 25px white);
+}
+.repoP {
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  &:hover {
+    color: #ffc107;
+    // transition: all ease-out 0.1s;
+    // transform: scale(1.2);
+    // text-shadow: 2px 2px 2px black;
+  }
+  @media (max-width: 700px) {
+    font-size: 0.8rem;
+  }
+}
+
+.fechas {
+  color: black;
+  text-shadow: none;
+
+  @media (max-width: 700px) {
+    font-size: 0.7rem;
+  }
+}
