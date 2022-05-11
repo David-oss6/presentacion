@@ -39,7 +39,7 @@ export default function Contacto() {
                 </td>
                 <td>
                   <input
-                    required="true"
+                    required={true}
                     className="inputForm"
                     type="text"
                     name="name"
@@ -56,7 +56,7 @@ export default function Contacto() {
                     type="email"
                     id="mail"
                     name="mail"
-                    required="true"
+                    required={true}
                   ></input>
                 </td>
               </tr>
@@ -69,7 +69,7 @@ export default function Contacto() {
                     className="message inputForm"
                     type="text"
                     name="message"
-                    required="true"
+                    required={true}
                   ></textarea>
                 </td>
               </tr>

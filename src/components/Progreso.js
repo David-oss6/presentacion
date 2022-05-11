@@ -1,5 +1,9 @@
 import React from "react";
 import logo from "../img/github_logo.png";
+import tecnocasa from "../img/capturas de pantalla/tecnocasa.png";
+import skyscanner from "../img/capturas de pantalla/skyscanner_clone.PNG";
+import youtube from "../img/capturas de pantalla/youtube.PNG";
+import crypto from "../img/capturas de pantalla/crypto.PNG";
 import { useState } from "react";
 import "../styles/progreso/progreso.scss";
 
@@ -46,6 +50,70 @@ export default function Progreso({ repos }) {
     <>
       {repos && (
         <div className="git_fondo inicial">
+          <div>
+            <h5 className="myh5">Ejemplos de maquetación:</h5>
+            <div className="img_container">
+              <div>
+                {" "}
+                <p className="titulo_ejemplo">Tecnocasa</p>
+                <a
+                  target="_blank"
+                  href="https://david-oss6.github.io/real_state/"
+                >
+                  <img
+                    className="img_ejemplo"
+                    src={tecnocasa}
+                    alt="tecnocasa_clone"
+                  />
+                </a>
+              </div>
+              <div>
+                <p className="titulo_ejemplo">Skyscanner</p>
+                <a
+                  target="_blank"
+                  href="https://david-oss6.github.io/skyscanner_clone/"
+                >
+                  <img
+                    className="img_ejemplo"
+                    src={skyscanner}
+                    alt="skyscanner_clone"
+                  />
+                </a>
+              </div>
+            </div>
+            <br />
+            <h5 className="myh5">Ejemplos de funcionalidad con Apis:</h5>
+            <div className="img_container">
+              <div>
+                <p className="titulo_ejemplo">Cryptomonedas</p>
+                <a
+                  target="_blank"
+                  href="https://david-oss6.github.io/cryptocurrency/"
+                >
+                  <img
+                    className="img_ejemplo"
+                    src={crypto}
+                    alt="skyscanner_clone"
+                  />
+                </a>
+              </div>
+              <div>
+                {" "}
+                <p className="titulo_ejemplo">YoutubeApi</p>
+                <a
+                  target="_blank"
+                  href="https://david-oss6.github.io/Sprint-9/"
+                >
+                  <img
+                    className="img_ejemplo"
+                    src={youtube}
+                    alt="tecnocasa_clone"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr />
           <p className="texto_git">
             A continuación estan listados mis proyectos subidos a Github. Del
             sprint 1 al 9 junto con interview task pertenecen a los ejercicios

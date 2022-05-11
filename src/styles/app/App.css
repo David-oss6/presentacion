@@ -11,6 +11,8 @@ body {
 }
 .content_container {
   min-height: calc(100vh);
+  display: flex;
+  flex-direction: column;
 }
 .navBar {
   display: flex;
@@ -19,9 +21,13 @@ body {
   justify-content: space-between;
   margin: 2% 2% 20px 2%;
 }
+.title_hamburger_container {
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+}
 h1 {
   font-size: 1.9rem;
-  min-width: 300px;
 }
 .start_h1_size {
   font-size: 2.6rem;
@@ -169,6 +175,11 @@ h1 {
   h1 {
     font-size: 1.6rem;
   }
+  .title_hamburger_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 @media (max-width: 530px) {
   .start_h1_size {
@@ -176,5 +187,8 @@ h1 {
   }
   .start_header_size {
     font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 1.3rem;
   }
 }

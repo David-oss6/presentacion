@@ -22,7 +22,6 @@ function App() {
 
   useEffect(() => {
     setSize(window.innerWidth);
-
     try {
       axios(`https://api.github.com/users/David-oss6/repos`).then((res) =>
         handleRepos(res.data)
@@ -65,25 +64,28 @@ function App() {
       <>
         <div className="content_container">
           <nav className="navBar">
-            <TitleContainer className="titleContainer" inicio={inicio}>
-              <div>
-                <h1
-                  className={
-                    inicio
-                      ? "text-warning titul start_h1_size"
-                      : "text-warning titulo"
-                  }
-                >
-                  Front-end Developer
-                </h1>
-                <div className={inicio ? "header start_header_size" : "header"}>
-                  <p>David Iglesias Molina</p>
-                  <p>im.david85@gmail.com</p>
-                  <p>Barcelona</p>
+            <div className="title_hamburger_container">
+              <TitleContainer className="titleContainer" inicio={inicio}>
+                <div>
+                  <h1
+                    className={
+                      inicio
+                        ? "text-warning titul start_h1_size"
+                        : "text-warning titulo"
+                    }
+                  >
+                    Front-end Developer
+                  </h1>
+                  <div
+                    className={inicio ? "header start_header_size" : "header"}
+                  >
+                    <p>David Iglesias Molina</p>
+                    <p>im.david85@gmail.com</p>
+                  </div>
                 </div>
-              </div>
-            </TitleContainer>
-            {!inicio && modal && <DropDown set_verSobreMi={set_verSobreMi} />}
+              </TitleContainer>
+              {!inicio && modal && <DropDown set_verSobreMi={set_verSobreMi} />}
+            </div>
             {!inicio && !modal && (
               <div className="enlaces neonText">
                 <LinkContainer inicio={inicio}>
@@ -112,24 +114,28 @@ function App() {
               </div>
             )}
           </nav>
-          {inicio && (
-            <>
-              <div className="cuadrado"></div>
-              <img className="coding" src={coding} alt="code" />
-            </>
-          )}
-          {ver_sobreMi ? <SobreMi /> : ""}
-          {!inicio && (
-            <>
-              <Routes>
-                <Route path="/" element={<SobreMi />} />
-                <Route path="/progreso" element={<Progreso repos={repos} />} />
-                <Route path="/contacto" element={<Contacto />} />
-              </Routes>
-            </>
-          )}
+          <div>
+            {inicio && (
+              <>
+                <div className="cuadrado"></div>
+                <img className="coding" src={coding} alt="code" />
+              </>
+            )}
+            {ver_sobreMi ? <SobreMi /> : ""}
+            {!inicio && (
+              <>
+                <Routes>
+                  <Route path="/" element={<SobreMi />} />
+                  <Route
+                    path="/progreso"
+                    element={<Progreso repos={repos} />}
+                  />
+                  <Route path="/contacto" element={<Contacto />} />
+                </Routes>
+              </>
+            )}
+          </div>
         </div>
-
         {!inicio && (
           <footer
             className={modal ? "footer_modal footer_pin" : "footer footer_pin"}
