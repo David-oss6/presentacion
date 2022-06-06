@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/presentacion/static/css/main.7daaecb0.css",
-    "main.js": "/presentacion/static/js/main.ab076a6c.js",
+    "main.js": "/presentacion/static/js/main.103b6e07.js",
     "static/media/skyscanner_clone.PNG": "/presentacion/static/media/skyscanner_clone.6f31751bbc49a25f0272.PNG",
     "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.bdb388ac5550d5dabb5d.pdf",
     "static/media/youtube.PNG": "/presentacion/static/media/youtube.8a1bc011848426059edd.PNG",
-    "static/media/crypto.PNG": "/presentacion/static/media/crypto.c46023fb0f4aa86dabce.PNG",
+    "static/media/crypto.PNG": "/presentacion/static/media/crypto.a2cf641df4d4b119f4bf.PNG",
     "static/media/tecnocasa.png": "/presentacion/static/media/tecnocasa.fa55345b30d5a7d94b1d.png",
     "static/media/insta.png": "/presentacion/static/media/insta.acde60f4bef10932815d.png",
     "static/media/coding_2.png": "/presentacion/static/media/coding_2.382578ea7bbc52488136.png",
@@ -14,10 +14,10 @@
     "static/media/github.png": "/presentacion/static/media/github.7039910b69e78c9b4395.png",
     "index.html": "/presentacion/index.html",
     "main.7daaecb0.css.map": "/presentacion/static/css/main.7daaecb0.css.map",
-    "main.ab076a6c.js.map": "/presentacion/static/js/main.ab076a6c.js.map"
+    "main.103b6e07.js.map": "/presentacion/static/js/main.103b6e07.js.map"
   },
   "entrypoints": [
     "static/css/main.7daaecb0.css",
-    "static/js/main.ab076a6c.js"
+    "static/js/main.103b6e07.js"
   ]
 }
