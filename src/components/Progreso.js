@@ -115,7 +115,7 @@ export default function Progreso({ repos }) {
           </div>
           <hr />
           <p className="texto_git">
-            A continuación estan listados mis proyectos subidos a Github. Del
+            A continuación están listados mis proyectos subidos a Github. Del
             sprint 1 al 9 junto con interview task pertenecen a los ejercicios
             realizados durante mi formación. Los siguientes corresponden a mis
             propios proyectos.
