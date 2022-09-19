@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/presentacion/static/css/main.7daaecb0.css",
-    "main.js": "/presentacion/static/js/main.0d143084.js",
+    "main.js": "/presentacion/static/js/main.d45240d4.js",
     "static/media/skyscanner_clone.PNG": "/presentacion/static/media/skyscanner_clone.6f31751bbc49a25f0272.PNG",
     "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.f0d6fb3d795a462e031c.pdf",
     "static/media/youtube.PNG": "/presentacion/static/media/youtube.8a1bc011848426059edd.PNG",
@@ -14,10 +14,10 @@
     "static/media/github.png": "/presentacion/static/media/github.7039910b69e78c9b4395.png",
     "index.html": "/presentacion/index.html",
     "main.7daaecb0.css.map": "/presentacion/static/css/main.7daaecb0.css.map",
-    "main.0d143084.js.map": "/presentacion/static/js/main.0d143084.js.map"
+    "main.d45240d4.js.map": "/presentacion/static/js/main.d45240d4.js.map"
   },
   "entrypoints": [
     "static/css/main.7daaecb0.css",
-    "static/js/main.0d143084.js"
+    "static/js/main.d45240d4.js"
   ]
 }
