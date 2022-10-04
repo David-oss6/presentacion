@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Contacto/contactoStyle.scss";
 import emailjs from "emailjs-com";
 
 export default function Contacto() {
+  const [errorMsg, setErrorMsg] = useState(false);
+  const [enviado, setEnviado] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -14,9 +16,17 @@ export default function Contacto() {
       )
       .then(
         (result) => {
+          setEnviado(true);
+          setTimeout(() => {
+            setEnviado(false);
+          }, 3000);
           console.log(result.text);
         },
         (error) => {
+          setErrorMsg(true);
+          setTimeout(() => {
+            setErrorMsg(false);
+          }, 3000);
           console.log(error.text);
         }
       );
@@ -25,7 +35,10 @@ export default function Contacto() {
   return (
     <>
       <div className=" fondo inicial">
-        <p>No dudes en ponerte en contacto conmigo:</p>
+        <p>
+          No dudes en ponerte en contacto conmigo, te responderé lo antes
+          posible:
+        </p>
         <form
           onSubmit={sendEmail}
           className="formContainer"
@@ -83,6 +96,8 @@ export default function Contacto() {
             </tbody>
           </table>
         </form>
+        <div className={enviado ? "enviado" : "hide"}>Mensaje enviado</div>
+        <div className={errorMsg ? "enviado" : "hide"}>Algo salió mal</div>
       </div>
     </>
   );
