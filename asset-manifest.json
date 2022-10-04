@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/presentacion/static/css/main.7daaecb0.css",
-    "main.js": "/presentacion/static/js/main.d45240d4.js",
+    "main.css": "/presentacion/static/css/main.0b67df77.css",
+    "main.js": "/presentacion/static/js/main.50be4b3b.js",
     "static/media/skyscanner_clone.PNG": "/presentacion/static/media/skyscanner_clone.6f31751bbc49a25f0272.PNG",
-    "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.f0d6fb3d795a462e031c.pdf",
     "static/media/youtube.PNG": "/presentacion/static/media/youtube.8a1bc011848426059edd.PNG",
+    "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.50fa5d6fa14293049f0a.pdf",
+    "static/media/english_curriculum_vitae.pdf": "/presentacion/static/media/english_curriculum_vitae.2cbd7af4e20eefa5e8c3.pdf",
     "static/media/crypto.PNG": "/presentacion/static/media/crypto.a2cf641df4d4b119f4bf.PNG",
     "static/media/tecnocasa.png": "/presentacion/static/media/tecnocasa.fa55345b30d5a7d94b1d.png",
     "static/media/insta.png": "/presentacion/static/media/insta.acde60f4bef10932815d.png",
@@ -13,11 +14,11 @@
     "static/media/github_logo.png": "/presentacion/static/media/github_logo.667e1a9b812e18ad192a.png",
     "static/media/github.png": "/presentacion/static/media/github.7039910b69e78c9b4395.png",
     "index.html": "/presentacion/index.html",
-    "main.7daaecb0.css.map": "/presentacion/static/css/main.7daaecb0.css.map",
-    "main.d45240d4.js.map": "/presentacion/static/js/main.d45240d4.js.map"
+    "main.0b67df77.css.map": "/presentacion/static/css/main.0b67df77.css.map",
+    "main.50be4b3b.js.map": "/presentacion/static/js/main.50be4b3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7daaecb0.css",
-    "static/js/main.d45240d4.js"
+    "static/css/main.0b67df77.css",
+    "static/js/main.50be4b3b.js"
   ]
 }
