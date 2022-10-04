@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/presentacion/static/css/main.0b67df77.css",
-    "main.js": "/presentacion/static/js/main.50be4b3b.js",
+    "main.css": "/presentacion/static/css/main.002ebd5c.css",
+    "main.js": "/presentacion/static/js/main.08a9e6e7.js",
     "static/media/skyscanner_clone.PNG": "/presentacion/static/media/skyscanner_clone.6f31751bbc49a25f0272.PNG",
     "static/media/youtube.PNG": "/presentacion/static/media/youtube.8a1bc011848426059edd.PNG",
     "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.50fa5d6fa14293049f0a.pdf",
@@ -14,11 +14,11 @@
     "static/media/github_logo.png": "/presentacion/static/media/github_logo.667e1a9b812e18ad192a.png",
     "static/media/github.png": "/presentacion/static/media/github.7039910b69e78c9b4395.png",
     "index.html": "/presentacion/index.html",
-    "main.0b67df77.css.map": "/presentacion/static/css/main.0b67df77.css.map",
-    "main.50be4b3b.js.map": "/presentacion/static/js/main.50be4b3b.js.map"
+    "main.002ebd5c.css.map": "/presentacion/static/css/main.002ebd5c.css.map",
+    "main.08a9e6e7.js.map": "/presentacion/static/js/main.08a9e6e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b67df77.css",
-    "static/js/main.50be4b3b.js"
+    "static/css/main.002ebd5c.css",
+    "static/js/main.08a9e6e7.js"
   ]
 }
