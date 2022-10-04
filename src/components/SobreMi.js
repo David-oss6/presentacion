@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/sobremi/sobremiStyle.css";
 import cvImage from "../img/cvImage.png";
 import myPdf from "../pdf/Curriculum Vitae.pdf";
+import myEngPdf from "../pdf/english_curriculum_vitae.pdf";
 
 export default function SobreMi() {
   return (
@@ -35,14 +36,26 @@ export default function SobreMi() {
           </div>
           <div className="cvContainer">
             <h6 className="textoH3">Mi curriculum vitae:</h6>
-            <a href={myPdf} target="_blank">
-              <img
-                className="cvImgOff"
-                src={cvImage}
-                alt="cv"
-                title="curriculum"
-              />
-            </a>
+            <div className="aContainer">
+              <a className="pdfContainer" href={myPdf} target="_blank">
+                esp
+                <img
+                  className="cvImgOff"
+                  src={cvImage}
+                  alt="cv"
+                  title="curriculum"
+                />
+              </a>
+              <a className="pdfContainer" href={myEngPdf} target="_blank">
+                eng
+                <img
+                  className="cvImgOff"
+                  src={cvImage}
+                  alt="cv"
+                  title="curriculum"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div className="formacion_div">
