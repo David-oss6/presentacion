@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/presentacion/static/css/main.002ebd5c.css",
-    "main.js": "/presentacion/static/js/main.34501141.js",
+    "main.js": "/presentacion/static/js/main.ca6f2b98.js",
     "static/media/skyscanner_clone.PNG": "/presentacion/static/media/skyscanner_clone.6f31751bbc49a25f0272.PNG",
     "static/media/youtube.PNG": "/presentacion/static/media/youtube.8a1bc011848426059edd.PNG",
     "static/media/crypto.PNG": "/presentacion/static/media/crypto.a2cf641df4d4b119f4bf.PNG",
@@ -9,16 +9,16 @@
     "static/media/insta.png": "/presentacion/static/media/insta.acde60f4bef10932815d.png",
     "static/media/coding_2.png": "/presentacion/static/media/coding_2.382578ea7bbc52488136.png",
     "static/media/cvImage.png": "/presentacion/static/media/cvImage.65279e6199fe651ce5bb.png",
-    "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.919ec4177d2e56c62b82.pdf",
-    "static/media/english_curriculum_vitae.pdf": "/presentacion/static/media/english_curriculum_vitae.06062e896d42aff5ba7d.pdf",
+    "static/media/Curriculum Vitae.pdf": "/presentacion/static/media/Curriculum Vitae.c0819acdb84b47b8d080.pdf",
+    "static/media/english_curriculum_vitae.pdf": "/presentacion/static/media/english_curriculum_vitae.50822e4be19c61f7b9af.pdf",
     "static/media/github_logo.png": "/presentacion/static/media/github_logo.667e1a9b812e18ad192a.png",
     "static/media/github.png": "/presentacion/static/media/github.7039910b69e78c9b4395.png",
     "index.html": "/presentacion/index.html",
     "main.002ebd5c.css.map": "/presentacion/static/css/main.002ebd5c.css.map",
-    "main.34501141.js.map": "/presentacion/static/js/main.34501141.js.map"
+    "main.ca6f2b98.js.map": "/presentacion/static/js/main.ca6f2b98.js.map"
   },
   "entrypoints": [
     "static/css/main.002ebd5c.css",
-    "static/js/main.34501141.js"
+    "static/js/main.ca6f2b98.js"
   ]
 }
