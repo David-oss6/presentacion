@@ -18,7 +18,7 @@ function App() {
   const [inicio, setInicio] = useState(true);
   const [size, setSize] = useState();
   const [modal, setModal] = useState(null);
-  const [ver_sobreMi, set_verSobreMi] = useState(false);
+
 
   useEffect(() => {
     setSize(window.innerWidth);
@@ -31,7 +31,7 @@ function App() {
     }
     setTimeout(() => {
       setInicio(false);
-      set_verSobreMi(true);
+
     }, 3000);
   }, []);
   const handleRepos = (repos) => {
@@ -74,7 +74,7 @@ function App() {
                         : "text-warning titulo"
                     }
                   >
-                    Front-end Developer
+                    Full-Stack Developer
                   </h1>
                   <div
                     className={inicio ? "header start_header_size" : "header"}
@@ -84,31 +84,31 @@ function App() {
                   </div>
                 </div>
               </TitleContainer>
-              {!inicio && modal && <DropDown set_verSobreMi={set_verSobreMi} />}
+              {!inicio && modal && <DropDown />}
             </div>
             {!inicio && !modal && (
               <div className="enlaces neonText">
                 <LinkContainer inicio={inicio}>
                   <Link
-                    onClick={() => set_verSobreMi(false)}
+
                     className="links"
-                    to="/"
+                    to="/aboutme"
                   >
-                    QUIEN SOY
+                    ABOUT ME
                   </Link>
                   <Link
-                    onClick={() => set_verSobreMi(false)}
+
                     className="links"
                     to="/progreso"
                   >
-                    MI GITHUB
+                    MY GITHUB
                   </Link>
                   <Link
-                    onClick={() => set_verSobreMi(false)}
+
                     className="links"
                     to="/contacto"
                   >
-                    CONTACTO
+                    CONTACT
                   </Link>
                 </LinkContainer>
               </div>
@@ -121,11 +121,12 @@ function App() {
                 <img className="coding" src={coding} alt="code" />
               </>
             )}
-            {ver_sobreMi ? <SobreMi /> : ""}
+
             {!inicio && (
               <>
                 <Routes>
                   <Route path="/" element={<SobreMi />} />
+                  <Route path="/aboutme" element={<SobreMi />} />
                   <Route
                     path="/progreso"
                     element={<Progreso repos={repos} />}
@@ -141,12 +142,12 @@ function App() {
             className={modal ? "footer_modal footer_pin" : "footer footer_pin"}
           >
             <div className="link_container">
-              <p className="footer_text"> Puedes encontrarme en</p>
               <ul className="ulList ">
                 <li>
                   <a
                     href="https://www.linkedin.com/in/david-i-01944a15b/"
                     target="_blank"
+                    rel="linkedin"
                   >
                     <img
                       className="link_pic"

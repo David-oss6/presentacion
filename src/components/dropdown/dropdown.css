@@ -4,7 +4,7 @@
   flex-flow: column nowrap;
   cursor: pointer;
   gap: 2px;
-  margin-top: 8px;
+  margin-top: 8px; 
 }
 .dropImg {
   align-self: center;
@@ -15,8 +15,10 @@
 .drop_ul {
   width: 85px;
   border-radius: 4px;
-  padding: 0 7px;
-  margin: 0;
+  padding: 0 7px;  
+  position: absolute;
+  right: 3.3rem;
+  top: 1rem;
 }
 .drop_ul_border {
   background-color: #00000025;
@@ -39,7 +41,7 @@ a {
 }
 .dropOn:hover {
   text-shadow: 1px 1px black;
-  color: white;
+  color: #ffc107;
 }
 .dropOff {
   display: none;

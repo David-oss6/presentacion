@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../img/github_logo.png";
 import tecnocasa from "../img/capturas de pantalla/tecnocasa.png";
 import skyscanner from "../img/capturas de pantalla/skyscanner_clone.PNG";
-import youtube from "../img/capturas de pantalla/youtube.PNG";
+import chat from '../img/chat.png'
 import crypto from "../img/capturas de pantalla/crypto.PNG";
 import { useState } from "react";
 import "../styles/progreso/progreso.scss";
@@ -10,7 +10,7 @@ import "../styles/progreso/progreso.scss";
 export default function Progreso({ repos }) {
   const [orden, setOrden] = useState({
     direction: 0,
-    texto: "nuevos primero",
+    texto: "new first",
   });
   const [clicked, setClicked] = useState(false);
 
@@ -27,7 +27,7 @@ export default function Progreso({ repos }) {
       });
       setOrden({
         direction: 1,
-        texto: "antiguos primero",
+        texto: "older first",
       });
     } else if (x == 1) {
       repos.sort((a, b) => {
@@ -41,7 +41,7 @@ export default function Progreso({ repos }) {
       });
       setOrden({
         direction: 0,
-        texto: "nuevos primero",
+        texto: "new first",
       });
     }
   };
@@ -51,9 +51,9 @@ export default function Progreso({ repos }) {
       {repos && (
         <div className="git_fondo inicial">
           <div>
-            <h5 className="myh5">Ejemplos de maquetación:</h5>
+            <h5 className="myh5">Some exemples:</h5>
             <div className="img_container">
-              <div>
+              <div className="card-container">
                 {" "}
                 <p className="titulo_ejemplo">Tecnocasa</p>
                 <a
@@ -66,8 +66,12 @@ export default function Progreso({ repos }) {
                     alt="tecnocasa_clone"
                   />
                 </a>
+                <p>
+                  A layout clone of Tecnocasa. <br />
+                  Built with React.js
+                </p>
               </div>
-              <div>
+              <div className="card-container">
                 <p className="titulo_ejemplo">Skyscanner</p>
                 <a
                   target="_blank"
@@ -79,13 +83,13 @@ export default function Progreso({ repos }) {
                     alt="skyscanner_clone"
                   />
                 </a>
+                <p>
+                  A layout clone of Skyscanner.<br />
+                  Build with React.js
+                </p>
               </div>
-            </div>
-            <br />
-            <h5 className="myh5">Ejemplos de funcionalidad con Apis:</h5>
-            <div className="img_container">
-              <div>
-                <p className="titulo_ejemplo">Cryptomonedas</p>
+              <div className="card-container">
+                <p className="titulo_ejemplo">Cryptocurrency</p>
                 <a
                   target="_blank"
                   href="https://david-oss6.github.io/cryptocurrency/"
@@ -93,34 +97,36 @@ export default function Progreso({ repos }) {
                   <img
                     className="img_ejemplo"
                     src={crypto}
-                    alt="skyscanner_clone"
+                    alt="cryptocurrency"
                   />
                 </a>
+                <p>
+                  Calling a free API (https://rapidapi.com/Glavier/api/binance43/) to obtain cryptocurrency values and fluctuations.<br />
+                  Build with React.js and axios.
+                </p>
               </div>
-              <div>
+              <div className="card-container" >
                 {" "}
-                <p className="titulo_ejemplo">YoutubeApi</p>
+                <p className="titulo_ejemplo">Chat</p>
                 <a
                   target="_blank"
-                  href="https://david-oss6.github.io/Sprint-9/"
+                  href="https://github.com/David-oss6/chat"
                 >
                   <img
                     className="img_ejemplo"
-                    src={youtube}
-                    alt="tecnocasa_clone"
+                    src={chat}
+                    alt="chat"
                   />
                 </a>
+                <p>
+                  Chat is developed with Javascript at the frontend and Typescript at the backend. Using mainly socket.io and NodeJs at the backend. And MongoDB as a  database. <br />
+                  Using React at the frontend separating the client and backend into two different servers.
+                </p>
               </div>
             </div>
           </div>
           <hr />
-          <p className="texto_git">
-            A continuación están listados mis proyectos subidos a Github. Del
-            sprint 1 al 9 junto con interview task pertenecen a los ejercicios
-            realizados durante mi formación. Los siguientes corresponden a mis
-            propios proyectos.
-            <br /> ¡No dudes en hacer click para ver el código!
-          </p>
+
           <div className="h3Btn_container">
             <h3 className="h3Title">
               <img
@@ -129,7 +135,7 @@ export default function Progreso({ repos }) {
                 title="https://github.com/David-oss6"
                 alt="repositiorios"
               />
-              Mis repositiorios en GitHub
+              My GitHub repositories
             </h3>
             <div className="orderBox">
               <div
@@ -140,14 +146,14 @@ export default function Progreso({ repos }) {
                 }
                 onClick={() => setClicked(!clicked)}
               >
-                Odenar por: {clicked ? "" : orden.texto}
+                Order by: {clicked ? "" : orden.texto}
                 {clicked && (
                   <div className="btnContainer">
                     <button className="orderBtn" onClick={() => handleOrder(0)}>
-                      Los más antiguos primero
+                      Oldest first
                     </button>
                     <button className="orderBtn" onClick={() => handleOrder(1)}>
-                      Los más nuevos primero
+                      New first
                     </button>
                   </div>
                 )}
@@ -158,17 +164,17 @@ export default function Progreso({ repos }) {
           <ol className="repoList">
             {repos.map((repo, index) => (
               <li className="repoLi" key={index}>
-                <div className="repoLi_container">
-                  <p className="repoP">{index + 1}. </p>
-                  <a
-                    className="repoA"
-                    target="_blank"
-                    href={`https://github.com/David-oss6/${repo.name}`}
-                  >
+                <a
+                  className="repoA"
+                  target="_blank"
+                  href={`https://github.com/David-oss6/${repo.name}`}
+                >
+                  <div className="repoLi_container">
+                    <p className="repoP">{index + 1}. </p>
                     <p className="repoP">{repo.name}</p>
-                  </a>
-                </div>
-                <p className="fechas">{repo.created_at.slice(0, 10)}</p>
+                  </div>
+                  <p className="fechas">{repo.created_at.slice(0, 10)}</p>
+                </a>
               </li>
             ))}
           </ol>

@@ -21,9 +21,7 @@ export const LinkContainer = styled.div`
   display: flex;
   position: ${({ inicio }) => (inicio ? "absolute" : "static")};
   trnsform: ${({ inicio }) => (inicio ? "translate(100vw)" : "static")};
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  gap: 20px;
+  flex-flow: row nowrap;  
   transition: 0.5s ease-in;
   opacity: ${({ inicio }) => (inicio ? "0" : "1")};
   @media (max-width: 670px) {

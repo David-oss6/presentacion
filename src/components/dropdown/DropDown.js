@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import "./dropdown.css";
 import dropImg from "../../img/dropdown.png";
 
-export default function DropDown({ set_verSobreMi }) {
+export default function DropDown() {
   const [drop, setDrop] = useState(false);
   const handleClick = () => {
     setDrop(!drop);
-    set_verSobreMi(false);
   };
   return (
     <div className="drop_container">
@@ -22,9 +21,9 @@ export default function DropDown({ set_verSobreMi }) {
           <Link
             onClick={() => handleClick()}
             className={drop ? "dropOn" : "dropOff"}
-            to="/"
+            to="/aboutme"
           >
-            QUIEN SOY
+            ABOUT ME
           </Link>
         </li>
         <li>
@@ -33,7 +32,7 @@ export default function DropDown({ set_verSobreMi }) {
             className={drop ? "dropOn" : "dropOff"}
             to="/progreso"
           >
-            MI GITHUB
+            MY GITHUB
           </Link>
         </li>
         <li>
@@ -42,7 +41,7 @@ export default function DropDown({ set_verSobreMi }) {
             className={drop ? "dropOn" : "dropOff"}
             to="/contacto"
           >
-            CONTACTO
+            CONTACT
           </Link>
         </li>
       </ul>

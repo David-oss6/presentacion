@@ -35,10 +35,6 @@ export default function Contacto() {
   return (
     <>
       <div className=" fondo inicial">
-        <p>
-          No dudes en ponerte en contacto conmigo, te responderé lo antes
-          posible:
-        </p>
         <form
           onSubmit={sendEmail}
           className="formContainer"
@@ -48,7 +44,7 @@ export default function Contacto() {
             <tbody>
               <tr>
                 <td>
-                  <label htmlFor="fname">Nombre:</label>
+                  <label htmlFor="fname">Name:</label>
                 </td>
                 <td>
                   <input
@@ -75,7 +71,7 @@ export default function Contacto() {
               </tr>
               <tr className="tr_message">
                 <td className="label_msg">
-                  <label htmlFor="lname">Mensaje:</label>
+                  <label htmlFor="lname">Message:</label>
                 </td>
                 <td>
                   <textarea
