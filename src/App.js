@@ -125,8 +125,9 @@ function App() {
             {!inicio && (
               <>
                 <Routes>
-                  <Route path="/" element={<SobreMi />} />
-                  <Route path="/aboutme" element={<SobreMi />} />
+                  <Route exact path="/presentacion" element={<SobreMi />} />
+                  <Route exact path="/" element={<SobreMi />} />
+                  <Route exact path="/aboutme" element={<SobreMi />} />
                   <Route
                     path="/progreso"
                     element={<Progreso repos={repos} />}
