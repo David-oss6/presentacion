@@ -125,7 +125,7 @@ function App() {
             {!inicio && (
               <>
                 <Routes>
-                  <Route exact path="/presentacion" element={<SobreMi />} />
+                  <Route exact path="/presentacion/" element={<SobreMi />} />
                   <Route exact path="/" element={<SobreMi />} />
                   <Route exact path="/aboutme" element={<SobreMi />} />
                   <Route
