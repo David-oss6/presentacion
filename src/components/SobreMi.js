@@ -83,29 +83,6 @@ export default function SobreMi() {
           </ul>
         </div>
         <hr />
-        <div className="cvContainer">
-          <h6 className="textoH3">My resume:</h6>
-          <div className="aContainer">
-            <a className="pdfContainer" href={myPdf} target="_blank">
-              esp
-              <img
-                className="cvImgOff"
-                src={cvImage}
-                alt="cv"
-                title="curriculum"
-              />
-            </a>
-            <a className="pdfContainer" href={myEngPdf} target="_blank">
-              eng
-              <img
-                className="cvImgOff"
-                src={cvImage}
-                alt="cv"
-                title="curriculum"
-              />
-            </a>
-          </div>
-        </div>
       </div>
     </>
   );
